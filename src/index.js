@@ -1,14 +1,10 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import App from "./App";
+import ReactDOM from "react-dom/client";
+import React from "react";
 
-function Main() {
-  return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
-    </HashRouter>
-  );
-}
-
-export default Main;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <HashRouter>
+    <App />
+  </HashRouter>
+);
