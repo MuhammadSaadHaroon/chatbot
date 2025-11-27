@@ -1,14 +1,18 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import Chatbot from "./components/Chatbot";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom'; // GitHub Pages ke liye HashRouter
 
-function App() {
-  return (
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<Chatbot />} />
-      </Routes>
+      <App />
     </HashRouter>
-  );
-}
+  </React.StrictMode>
+);
 
-export default App;
+// Optional: performance measure
+reportWebVitals();
